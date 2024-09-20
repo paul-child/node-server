@@ -1,4 +1,4 @@
-# Node server demo
+# SSR JSX Demo
 
 ## To run
 
