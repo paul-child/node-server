@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Note from './Note';  // Assuming you save the component as Note.js
+import Note from './Note';
 
-ReactDOM.render(
-  <Note note="This is a note." name="Bob Smith" />,
-  document.getElementById('root')
-);
+function App() {
+  return (
+    <div>
+      <Note note="This is a client-side rendered note." name="Alice Doe" />
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

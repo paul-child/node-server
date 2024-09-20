@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Note({ note, name }) {
     return (
         <div>
