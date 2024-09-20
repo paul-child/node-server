@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/Widget.jsx', // your main file where you import the component
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js' // Output file
   },
   module: {
     rules: [
@@ -23,5 +23,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  mode: 'development' // you can change this to 'production' when you're ready to optimize
+  mode: 'development' // Change to 'production' when ready
 };
