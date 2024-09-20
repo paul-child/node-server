@@ -1,17 +1,44 @@
-import React, { useEffect } from 'react';
-import Note from './Note';
+import React, { useEffect, useState } from 'react';
+import Header from './Header';
 
-function Widget({name, note}) {
+const REQUEST_URL = 'https://dog.ceo/api/breed/airedale/images/random';
 
+/**
+ * Async fetch function that returns a random dog photo
+ * 
+ * @returns {string} - url of photo
+ */
+const gettaBoi = async () => {
+    const resp = await fetch(REQUEST_URL);  
+    return resp.json();
+};
+
+function Widget({title, caption}) {
+    const [boi, setBoi] = useState('');
+
+    /**
+     * Fetch dog
+     */
     useEffect(() => {
-        console.log('Widget rendered!');
+        const goFetch = async () => {
+            const {message} = await gettaBoi();
+            setBoi(message);
+        };
+      
+        goFetch()
     }, [])
     
     return (
         <>
             <link rel="stylesheet" href="/styles.css"></link>
             <div id='widget'>
-                <Note note={note} name={name} />
+                <Header 
+                    title={title} 
+                    caption={caption} 
+                />
+                <div className="dog">
+                    <img src={boi} />
+                </div>
             </div>
         </>
     );
