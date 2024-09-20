@@ -17,7 +17,7 @@ function Widget({title, caption}) {
     const [boi, setBoi] = useState('');
 
     /**
-     * Fetch dog
+     * When component mounts (on client) fetch dog and set into component state
      */
     useEffect(() => {
         const goFetch = async () => {
