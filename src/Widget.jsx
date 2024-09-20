@@ -8,9 +8,12 @@ function Widget({name, note}) {
     }, [])
     
     return (
-        <div id='widget'>
-            <Note note={note} name={name} />
-        </div>
+        <>
+            <link rel="stylesheet" href="/styles.css"></link>
+            <div id='widget'>
+                <Note note={note} name={name} />
+            </div>
+        </>
     );
 }
 
