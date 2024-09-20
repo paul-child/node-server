@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/Widget.jsx', // your main file where you import the component
+  entry: './src/index.jsx', // your main file where you import the component
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js' // Output file
